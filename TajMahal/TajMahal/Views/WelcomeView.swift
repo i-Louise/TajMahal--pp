@@ -43,65 +43,72 @@ struct WelcomeView: View {
                 Spacer()
                 
                 // details
-                
                 HStack {
                     Label("Mardi", systemImage: "clock")
                     Spacer()
                     Text("11h30 - 14h30・18h30 - 22h00")
                 }
                 .font(.system(size: 12))
+                
                 Divider()
                     .overlay(.white)
+                
                 HStack {
                     Label("Type de Service", systemImage: "clock")
                     Spacer()
                     Text("À emporter")
                 }
                 .font(.system(size: 12))
+                
                 Divider()
                     .overlay(.white)
+                
                 HStack {
                     Label("12 Avenue de la Brique - 75010 Paris", systemImage: "clock")
                     Spacer()
                 }
                 .font(.system(size: 12))
+                
                 Divider()
                     .overlay(.white)
+                
                 HStack {
                     Label("www.tajmahal.fr", systemImage: "clock")
                     Spacer()
                 }
                 .font(.system(size: 12))
+                
                 Divider()
                     .overlay(.white)
+                
                 HStack {
                     Label("06 12 34 56 78", systemImage: "clock")
                     Spacer()
                 }
                 .font(.system(size: 12))
+                
                 Divider()
                     .overlay(.white)
-                    
-                    Spacer()
-                    
-                    // Button for user to access the menu screen
-                    NavigationLink {
-                        MenuView()
-                    } label : {
-                        Text("Accéder au menu")
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .frame(width: 335, height: 40, alignment: .center)
-                            .background(Color("CustomRed"))
-                            .cornerRadius(10)
-                    }
-                }
-                .padding(.horizontal)
                 
+                Spacer()
+                
+                // Button for user to access the menu screen
+                NavigationLink {
+                    MenuView()
+                } label : {
+                    Text("Accéder au menu")
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .frame(width: 335, height: 40, alignment: .center)
+                        .background(Color("CustomRed"))
+                        .cornerRadius(10)
+                }
             }
+            .padding(.horizontal)
         }
     }
+}
     
-    #Preview {
-        WelcomeView()
-    }
+#Preview {
+    WelcomeView()
+}
