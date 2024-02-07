@@ -15,6 +15,7 @@
 		42E9DCBF2AF11439007CE7D0 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */; };
 		42E9DCC22AF117AE007CE7D0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9DCC12AF117AE007CE7D0 /* MenuView.swift */; };
 		7367B8E62B62BCEF003BBA49 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7367B8E52B62BCEF003BBA49 /* Launch Screen.storyboard */; };
+		73CCEEA12B72A3570097AEAB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCEEA02B72A3570097AEAB /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		42E9DCC02AF11662007CE7D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		42E9DCC12AF117AE007CE7D0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		7367B8E52B62BCEF003BBA49 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		73CCEEA02B72A3570097AEAB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */,
-				42E9DCC12AF117AE007CE7D0 /* MenuView.swift */,
+				73CCEEA02B72A3570097AEAB /* MenuView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,8 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				428D2B532AFA882700BBA4F5 /* ViewModel.swift in Sources */,
+				73CCEEA12B72A3570097AEAB /* MenuView.swift in Sources */,
 				42E9DCBF2AF11439007CE7D0 /* WelcomeView.swift in Sources */,
-				42E9DCC22AF117AE007CE7D0 /* MenuView.swift in Sources */,
 				42E9DCAE2AF11136007CE7D0 /* TajMahalApp.swift in Sources */,
 				428D2B512AFA851900BBA4F5 /* Model.swift in Sources */,
 			);
