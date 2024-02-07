@@ -13,9 +13,8 @@
 		42E9DCB22AF11138007CE7D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E9DCB12AF11138007CE7D0 /* Assets.xcassets */; };
 		42E9DCB52AF11138007CE7D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E9DCB42AF11138007CE7D0 /* Preview Assets.xcassets */; };
 		42E9DCBF2AF11439007CE7D0 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */; };
-		42E9DCC22AF117AE007CE7D0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9DCC12AF117AE007CE7D0 /* MenuView.swift */; };
 		7367B8E62B62BCEF003BBA49 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7367B8E52B62BCEF003BBA49 /* Launch Screen.storyboard */; };
-		73CCEE9F2B7178C90097AEAB /* DishSpice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCEE9E2B7178C90097AEAB /* DishSpice.swift */; };
+		73CCEE9F2B7178C90097AEAB /* DishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCEE9E2B7178C90097AEAB /* DishCell.swift */; };
 		73CCEEA12B72A3570097AEAB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCEEA02B72A3570097AEAB /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +27,8 @@
 		42E9DCB42AF11138007CE7D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		42E9DCC02AF11662007CE7D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		42E9DCC12AF117AE007CE7D0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		7367B8E52B62BCEF003BBA49 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		73CCEE9E2B7178C90097AEAB /* DishSpice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishSpice.swift; sourceTree = "<group>"; };
+		73CCEE9E2B7178C90097AEAB /* DishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCell.swift; sourceTree = "<group>"; };
 		73CCEEA02B72A3570097AEAB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +64,6 @@
 			children = (
 				42E9DCC02AF11662007CE7D0 /* Info.plist */,
 				7367B8E52B62BCEF003BBA49 /* Launch Screen.storyboard */,
-				42E9DCBB2AF113D1007CE7D0 /* Views */,
 				42E9DCAD2AF11136007CE7D0 /* TajMahalApp.swift */,
 				42E9DCBB2AF113D1007CE7D0 /* Views */,
 				42E9DCB12AF11138007CE7D0 /* Assets.xcassets */,
@@ -90,7 +87,7 @@
 			children = (
 				42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */,
 				73CCEEA02B72A3570097AEAB /* MenuView.swift */,
-				73CCEE9E2B7178C90097AEAB /* DishSpice.swift */,
+				73CCEE9E2B7178C90097AEAB /* DishCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,7 +167,7 @@
 				73CCEEA12B72A3570097AEAB /* MenuView.swift in Sources */,
 				42E9DCBF2AF11439007CE7D0 /* WelcomeView.swift in Sources */,
 				42E9DCAE2AF11136007CE7D0 /* TajMahalApp.swift in Sources */,
-				73CCEE9F2B7178C90097AEAB /* DishSpice.swift in Sources */,
+				73CCEE9F2B7178C90097AEAB /* DishCell.swift in Sources */,
 				428D2B512AFA851900BBA4F5 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
