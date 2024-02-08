@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
+// Encapsulate the dish cells properties
 struct DishCell: View {
     let dish: Dish
-    
     var body: some View {
         HStack {
             Image(dish.imageName)
@@ -36,34 +36,26 @@ struct DishCell: View {
                     Spacer()
                     
                     // Spice level icons
-                    if dish.spiceLevel == SpiceLevel.light {
-                        Image(.pepper)
-                            .renderingMode(.template)
-                            .foregroundColor(Color(.customRed))
-                        Image(.pepper)
-                        Image(.pepper)
-                    } else if dish.spiceLevel == SpiceLevel.medium {
-                        Image(.pepper)
-                            .renderingMode(.template)
-                            .foregroundColor(Color(.customRed))
-                        Image(.pepper)
-                            .renderingMode(.template)
-                            .foregroundColor(Color(.customRed))
-                        Image(.pepper)
-                    } else if dish.spiceLevel == SpiceLevel.hot {
-                        Image(.pepper)
-                            .renderingMode(.template)
-                            .foregroundColor(Color(.customRed))
-                        Image(.pepper)
-                            .renderingMode(.template)
-                            .foregroundColor(Color(.customRed))
-                        Image(.pepper)
-                            .renderingMode(.template)
-                            .foregroundColor(Color(.customRed))
-                    }
+                    PepperIcon(dish: dish)
                 }
             }
         }
     }
 }
 
+// This view allows PepperIcon to be used in others screens 
+struct PepperIcon: View {
+    let dish: Dish
+    var body: some View {
+        
+        ForEach (1...3, id: \.self) { value in
+            if dish.spiceLevel.rawValue >= value {
+                Image(.pepper)
+                    .renderingMode(.template)
+                    .foregroundColor(Color(.customRed))
+            } else {
+                Image(.pepper)
+            }
+        }
+    }
+}
