@@ -15,12 +15,13 @@ struct MenuView: View {
     
     var body: some View {
         VStack {
-            NavigationView {
+            NavigationStack {
                 List {
                     Section {
                         ForEach(viewModel.apetizerArray) { dish in
                             DishCell(dish: dish)
                         }
+                        
                     } header: {
                         Text("Entrées")
                         // Opt-out from SwiftUI List section default header uppercase text style
@@ -39,12 +40,13 @@ struct MenuView: View {
                             .textCase(nil)
                             .bold()
                     }
+                    
                 }
-                
-                .listRowSpacing(15.0)
+                                
                 .navigationTitle("Menu")
                 // hide the default larger title
                 .navigationBarTitleDisplayMode(.inline)
+                
 
             }
         }
