@@ -9,49 +9,27 @@ import Foundation
 import SwiftUI
 
 struct DishDetailView: View {
-    let viewModel: ViewModel = ViewModel()
     let dish: Dish
     
     var body: some View {
         NavigationStack {
-            ZStack {
+            ZStack (alignment: .topTrailing) {
                 Image(dish.imageName)
                     .resizable(resizingMode: .stretch)
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 335, height: 467)
                     .cornerRadius(40)
-                                
+                    .padding(.horizontal)
+                
                 HStack {
-                    if dish.spiceLevel == SpiceLevel.light {
-                        Image(.pepper)
-                            .renderingMode(.template)
-                            .foregroundColor(Color(.customRed))
-                        Image(.pepper)
-                        Image(.pepper)
-                    } else if dish.spiceLevel == SpiceLevel.medium {
-                        Image(.pepper)
-                            .renderingMode(.template)
-                            .foregroundColor(Color(.customRed))
-                        Image(.pepper)
-                            .renderingMode(.template)
-                            .foregroundColor(Color(.customRed))
-                        Image(.pepper)
-                    } else if dish.spiceLevel == SpiceLevel.hot {
-                        Image(.pepper)
-                            .renderingMode(.template)
-                            .foregroundColor(Color(.customRed))
-                        Image(.pepper)
-                            .renderingMode(.template)
-                            .foregroundColor(Color(.customRed))
-                        Image(.pepper)
-                            .renderingMode(.template)
-                            .foregroundColor(Color(.customRed))
-                    }
+                    PepperIcon(dish: dish)
                 }
                 .padding(5.0)
                 .background(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 40, style: .continuous))
+                .padding([.top, .trailing])
             }
+            .frame(width: 335, height: 467, alignment: .topTrailing)
+            
             VStack(alignment: .leading) {
                 Spacer()
                 Text("Allergènes")
