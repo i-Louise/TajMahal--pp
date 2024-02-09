@@ -10,6 +10,7 @@ import SwiftUI
 
 // Menu sous forme de liste
 struct MenuView: View {
+    
     // Référence vers le view model qui permet d'accéder aux tableaux d'entrées et de plats du menu
     let viewModel: ViewModel = ViewModel()
     
@@ -21,6 +22,13 @@ struct MenuView: View {
                         ForEach(viewModel.apetizerArray) { dish in
                             DishCell(dish: dish)
                         }
+                        // hide the divider between rows
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(
+                            Rectangle()
+                                 .fill(Color(.white).opacity(1))
+                                 .cornerRadius(10.0)
+                                 .padding(4))
                         
                     } header: {
                         Text("Entrées")
@@ -35,6 +43,12 @@ struct MenuView: View {
                         ForEach(viewModel.mainCourseArray) { dish in
                             DishCell(dish: dish)
                         }
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(
+                            Rectangle()
+                                 .fill(Color(.white).opacity(1))
+                                 .cornerRadius(10.0)
+                                 .padding(4))
                     } header: {
                         Text("Plats Principaux")
                             .textCase(nil)
@@ -44,9 +58,12 @@ struct MenuView: View {
                 }
                                 
                 .navigationTitle("Menu")
-                // hide the default larger title
+                // replace the default larger title
                 .navigationBarTitleDisplayMode(.inline)
-                
+                // clear the default list background colour
+                .scrollContentBackground(.hidden)
+                // background color set
+                .background(Color(red: 241/255, green: 241/255, blue: 241/255))
 
             }
         }
