@@ -13,47 +13,59 @@ struct DishDetailView: View {
     
     var body: some View {
         NavigationStack {
+            
             ZStack (alignment: .topTrailing) {
                 Image(dish.imageName)
-                    .resizable(resizingMode: .stretch)
-                    .aspectRatio(contentMode: .fit)
-                    .cornerRadius(40)
-                    .padding(.horizontal)
-                
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 335, height: 400, alignment: .center)
+                    // Crop the image
+                    .clipped()
+                    .cornerRadius(10)
+
                 HStack {
                     PepperIcon(dish: dish)
                 }
                 .padding(5.0)
                 .background(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 40, style: .continuous))
-                .padding([.top, .trailing])
+                // margin between spice level and picture
+                .padding([.top, .trailing], 10)
             }
-            .frame(width: 335, height: 467, alignment: .topTrailing)
+            .frame(width: 335, height: 335, alignment: .center)
             
+            // Dish allergens infos
+            Spacer()
             VStack(alignment: .leading) {
-                Spacer()
-                Text("Allergènes")
+                
+                Text("Allergènes :")
                     .font(.system(size: 15))
                 Spacer()
+                    .frame(height: 20)
                 Text(dish.allergens)
                     .font(.system(size: 12))
-                Divider()
-                Text("Ingrédients:")
                 Spacer()
+                    .frame(height: 20)
+                Divider()
+                // Ingredients
+                Spacer()
+                    .frame(height: 20)
+                Text("Ingrédients :")
                     .font(.system(size: 15))
+                Spacer()
+                    .frame(height: 20)
                 Text(dish.ingredients)
                     .font(.system(size: 12))
                 Spacer()
-                
             }
+            
             .navigationTitle(dish.name)
             .navigationBarTitleDisplayMode(.inline)
+            .frame(width: 335, height: 300, alignment: .center)
         }
-        .padding(.horizontal)
     }
-    
 }
 
 #Preview {
-    DishDetailView(dish: Dish(name: "Chicken Tikka Masala", description: "Poulet mariné, grillé et servi dans une sauce masala", allergens: "Lait, yaourt, beurre clarifié (ghee), crème fraîche, crème de coco, ail, oignon", ingredients: "Huile, beurre clarifié (ghee), oignon, ail, gingembre, poudre de curcuma, poudre de cumin, poudre de coriandre, piment en poudre, tomates en purée, crème fraîche, crème de coco, sel, coriandre fraîche", spiceLevel: .medium, imageName: "Tikka Masala", price: "13.00"))
+    DishDetailView(dish: Dish(name: "Samosas aux légumes", description: "Délicieux chaussons frits garnis de légumes épicés", allergens: "Farine de blé", ingredients: "Mélange de légumes (pommes de terre, petits pois, carottes), épices indiennes, pâte à samosa, huile", spiceLevel: .light, imageName: "Samosas", price: "5.50"))
 }
