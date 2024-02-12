@@ -15,13 +15,15 @@ struct DishDetailView: View {
         NavigationStack {
             
             ZStack (alignment: .topTrailing) {
+                
                 Image(dish.imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 335, height: 400, alignment: .center)
+                    .frame(width: 335, height: 390, alignment: .center)
                     // Crop the image
                     .clipped()
                     .cornerRadius(10)
+    
 
                 HStack {
                     PepperIcon(dish: dish)
@@ -32,10 +34,9 @@ struct DishDetailView: View {
                 // margin between spice level and picture
                 .padding([.top, .trailing], 10)
             }
-            .frame(width: 335, height: 335, alignment: .center)
             
             // Dish allergens infos
-            Spacer()
+            .padding()
             VStack(alignment: .leading) {
                 
                 Text("Allergènes :")
@@ -58,14 +59,13 @@ struct DishDetailView: View {
                     .font(.system(size: 12))
                 Spacer()
             }
-            
             .navigationTitle(dish.name)
             .navigationBarTitleDisplayMode(.inline)
-            .frame(width: 335, height: 300, alignment: .center)
+            .frame(width: 335, height: 335, alignment: .center)
         }
     }
 }
 
 #Preview {
-    DishDetailView(dish: Dish(name: "Samosas aux légumes", description: "Délicieux chaussons frits garnis de légumes épicés", allergens: "Farine de blé", ingredients: "Mélange de légumes (pommes de terre, petits pois, carottes), épices indiennes, pâte à samosa, huile", spiceLevel: .light, imageName: "Samosas", price: "5.50"))
+    DishDetailView(dish: Dish(name: "Aloo Tikki", description: "Galettes de pommes de terre épicées et croustillantes", allergens: "Sans allergènes majeurs", ingredients: "Pommes de terre, épices, farine de pois chiches", spiceLevel: .medium, imageName: "Aloo", price: "5.50"))
 }
