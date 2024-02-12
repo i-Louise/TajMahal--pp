@@ -13,55 +13,56 @@ struct DishDetailView: View {
     
     var body: some View {
         NavigationStack {
-            
-            ZStack (alignment: .topTrailing) {
-                
-                Image(dish.imageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 335, height: 390, alignment: .center)
-                    // Crop the image
-                    .clipped()
-                    .cornerRadius(10)
-    
+            ScrollView {
+                ZStack (alignment: .topTrailing) {
+                    
+                    Image(dish.imageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 335, height: 390, alignment: .center)
+                        // Crop the image
+                        .clipped()
+                        .cornerRadius(10)
+        
 
-                HStack {
-                    PepperIcon(dish: dish)
+                    HStack {
+                        PepperIcon(dish: dish)
+                    }
+                    .padding(5.0)
+                    .background(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 40, style: .continuous))
+                    // margin between spice level and picture
+                    .padding([.top, .trailing], 10)
                 }
-                .padding(5.0)
-                .background(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 40, style: .continuous))
-                // margin between spice level and picture
-                .padding([.top, .trailing], 10)
-            }
-            
-            // Dish allergens infos
-            .padding()
-            VStack(alignment: .leading) {
                 
-                Text("Allergènes :")
-                    .font(.system(size: 15))
-                Spacer()
-                    .frame(height: 20)
-                Text(dish.allergens)
-                    .font(.system(size: 12))
-                Spacer()
-                    .frame(height: 20)
-                Divider()
-                // Ingredients
-                Spacer()
-                    .frame(height: 20)
-                Text("Ingrédients :")
-                    .font(.system(size: 15))
-                Spacer()
-                    .frame(height: 20)
-                Text(dish.ingredients)
-                    .font(.system(size: 12))
-                Spacer()
+                // Dish allergens infos
+                .padding()
+                VStack(alignment: .leading) {
+                    
+                    Text("Allergènes :")
+                        .font(.system(size: 15))
+                    Spacer()
+                        .frame(height: 20)
+                    Text(dish.allergens)
+                        .font(.system(size: 12))
+                    Spacer()
+                        .frame(height: 20)
+                    Divider()
+                    // Ingredients
+                    Spacer()
+                        .frame(height: 20)
+                    Text("Ingrédients :")
+                        .font(.system(size: 15))
+                    Spacer()
+                        .frame(height: 20)
+                    Text(dish.ingredients)
+                        .font(.system(size: 12))
+                    Spacer()
+                }
+                .navigationTitle(dish.name)
+                .navigationBarTitleDisplayMode(.inline)
+                .frame(width: 335, height: 335, alignment: .center)
             }
-            .navigationTitle(dish.name)
-            .navigationBarTitleDisplayMode(.inline)
-            .frame(width: 335, height: 335, alignment: .center)
         }
     }
 }
