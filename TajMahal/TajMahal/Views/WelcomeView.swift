@@ -54,7 +54,8 @@ struct WelcomeView: View {
                     .overlay(.white)
                 
                 HStack {
-                    Label("Type de Service", systemImage: "clock")
+                    Image("Pan")
+                    Text("Type de Service")
                     Spacer()
                     Text("À emporter")
                 }
@@ -64,7 +65,8 @@ struct WelcomeView: View {
                     .overlay(.white)
                 
                 HStack {
-                    Label("12 Avenue de la Brique - 75010 Paris", systemImage: "clock")
+                    Image("Location")
+                    Text("12 Avenue de la Brique - 75010 Paris")
                     Spacer()
                 }
                 .font(.system(size: 12))
@@ -73,7 +75,8 @@ struct WelcomeView: View {
                     .overlay(.white)
                 
                 HStack {
-                    Label("www.tajmahal.fr", systemImage: "clock")
+                    Image("World")
+                    Text("www.tajmahal.fr")
                     Spacer()
                 }
                 .font(.system(size: 12))
@@ -82,7 +85,7 @@ struct WelcomeView: View {
                     .overlay(.white)
                 
                 HStack {
-                    Label("06 12 34 56 78", systemImage: "clock")
+                    Label("06 12 34 56 78", systemImage: "phone")
                     Spacer()
                 }
                 .font(.system(size: 12))
@@ -108,7 +111,7 @@ struct WelcomeView: View {
         }
     }
 }
-    
+                          
 #Preview {
     WelcomeView()
 }
