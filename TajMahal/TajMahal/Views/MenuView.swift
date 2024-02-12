@@ -20,7 +20,9 @@ struct MenuView: View {
                 List {
                     Section {
                         ForEach(viewModel.apetizerArray) { dish in
-                            DishCell(dish: dish)
+                            NavigationLink(destination: DishDetailView(dish: dish)) {
+                                DishCell(dish: dish)
+                            }
                         }
                         // hide the divider between rows
                         .listRowSeparator(.hidden)
@@ -29,19 +31,19 @@ struct MenuView: View {
                                  .fill(Color(.white).opacity(1))
                                  .cornerRadius(10.0)
                                  .padding(4))
-                        
                     } header: {
                         Text("Entrées")
                         // Opt-out from SwiftUI List section default header uppercase text style
                             .textCase(nil)
-                            .bold()
-                        
+                            .bold()                        
                     }
                     
                     // Create the second section for the main courses
                     Section {
                         ForEach(viewModel.mainCourseArray) { dish in
-                            DishCell(dish: dish)
+                            NavigationLink(destination: DishDetailView(dish: dish)) {
+                                DishCell(dish: dish)
+                            }
                         }
                         .listRowSeparator(.hidden)
                         .listRowBackground(
@@ -56,7 +58,6 @@ struct MenuView: View {
                     }
                     
                 }
-                                
                 .navigationTitle("Menu")
                 // replace the default larger title
                 .navigationBarTitleDisplayMode(.inline)
