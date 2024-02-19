@@ -15,8 +15,8 @@ enum SpiceLevel : Int {
 }
 
 // Représente l'objet "plat", qui figure sur la carte du menu
-// Implementated an identifiable to dish
 struct Dish: Identifiable {
+    // Implementated an identifiable to dish
     let id: UUID = UUID()
     
     var name: String
