@@ -77,6 +77,7 @@ struct WelcomeView: View {
                     HStack {
                         Image("World")
                         Text("www.tajmahal.fr")
+                            .foregroundStyle(.black)
                         Spacer()
                     }
                     .font(.system(size: 12))
